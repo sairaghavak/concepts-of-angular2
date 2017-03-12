@@ -30,4 +30,4 @@ Start your server and run `ng e2e` to execute the end-to-end tests via [Protract
 ![created-prod-dist](https://cloud.githubusercontent.com/assets/16429828/23830651/d73a11bc-0735-11e7-9af3-3ced6edfd086.PNG)
 2. The files in `dist` folder is ready for deployment.
 
-To know more about [Angular CLI](https://github.com/angular/angular-cli), refer to [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md)
+To know more about [Angular CLI](https://github.com/angular/angular-cli), refer to [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
