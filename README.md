@@ -1,27 +1,35 @@
 # ConceptsOfAngular2
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0-rc.1.
+<small>This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0-rc.1.</small>
 
-## Development server
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+This is an angular2 application that will try to illustrate the concepts of angular2.
 
-## Code scaffolding
+## Prerequisites
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive/pipe/service/class/module`.
+1. Download [node.js](https://nodejs.org) and install it. Verify the installation with the below two commands.
+  - `node -v`
+  - `npm -v`
+2. Install [Angular CLI](https://github.com/angular/angular-cli) using the following command `npm install -g @angular/cli`. Verify the installation by issuing the commands.
+  - `ng help` and 
+  - `ng -v`
 
-## Build
+## Installation
+### Dev Setup
+1. Clone or download this project.
+2. `npm install`
+3. `ng server` or `ng serve`
+4. This will start the application at `4200` port on your `localhost`. *Url:* `http://localhost:4200` 
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
 
-## Running unit tests
+### Unit Testing
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io/1.0/index.html).
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Integration Testing
+Start your server and run `ng e2e` to execute the end-to-end tests via [Protractor](https://www.protractortest.org).
 
-## Running end-to-end tests
+### Prod Setup
+1. Build the project to create the artifact using `ng build --prod`, this would create the final project files in `dist/` folder.
+![created-prod-dist](https://cloud.githubusercontent.com/assets/16429828/23830651/d73a11bc-0735-11e7-9af3-3ced6edfd086.PNG)
+2. The files in `dist` folder is ready for deployment.
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+<small>To know more about [Angular CLI](https://github.com/angular/angular-cli), refer to [CLI Readme](https://github.com/angular/angular-cli/blob/master/README.md)</small>
