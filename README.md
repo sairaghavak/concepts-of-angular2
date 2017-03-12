@@ -1,6 +1,6 @@
 # ConceptsOfAngular2
 
-This project will try to illustrate the concepts of angular2. And the project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0-rc.1.
+This project will try to illustrate the concepts of angular2. And the project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0-rc.1. This app is available here: [https://sairaghavak.github.io/concepts-of-angular2](https://sairaghavak.github.io/concepts-of-angular2/)
 
 ## Prerequisites
 
