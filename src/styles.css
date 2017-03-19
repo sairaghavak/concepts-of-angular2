@@ -1,1 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-top: 70px; /* Here is the reference Link: http://stackoverflow.com/questions/11124777/twitter-bootstrap-navbar-fixed-top-overlapping-site */
+}
