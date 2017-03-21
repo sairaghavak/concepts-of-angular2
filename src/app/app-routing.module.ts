@@ -1,17 +1,17 @@
 import { NgModule } from '@angular/core';
 
 import { RouterModule, Routes } from '@angular/router';
-//import { HomeModule } from './home/home.module';
 
+import { HomeComponent } from './home/home.component';
 import { PageNotFoundComponent } from './page-not-found.component';
-import { ContentComponent } from './content/content.component'
+
 
 const appRoutes: Routes = [
     /* Note that the sequence of routing is important*/
-    //{ path: '', redirectTo: 'home', pathMatch: 'full' },
-    { path: '', component: ContentComponent },
-    { path: 'home', loadChildren: './home/home.module#HomeModule' },// I prefer this way of loading module
-    //{ path: 'home', loadChildren: () => HomeModule },// This is other way of loading module rquires import at top of this file
+    { path: '', redirectTo: 'home', pathMatch: 'full' },
+    { path: 'home', component: HomeComponent },
+    { path: 'concepts', loadChildren: './concepts/concepts.module#ConceptsModule' }, // I prefer this way of loading module
+    // { path: 'home', loadChildren: () => HomeModule }, // This is other way of loading module rquires import at top of this file
     { path: '**', component: PageNotFoundComponent }
 ];
 
@@ -20,4 +20,4 @@ const appRoutes: Routes = [
     exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const appRoutingComponents = [PageNotFoundComponent, ContentComponent];
+export const appRoutingComponents = [HomeComponent, PageNotFoundComponent];
