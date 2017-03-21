@@ -20,21 +20,13 @@
           <!-- home is a static route -->
           <li class=""><a routerLink="home" class="refreshNav">Home</a></li>
           <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" >Topics<span class="caret"></span></a>
+            <a class="dropdown-toggle" data-toggle="dropdown">Concepts<span class="caret"></span></a>
             <ul class="dropdown-menu">
-              <li *ngFor = "let topic of topics">
-                  <a  routerLink="topics/{{topic.topicRoute}}" class="refreshNav">{{topic.name}}</a>
+              <li *ngFor="let concept of concepts">
+                <!--<a [routerLink]="['concepts', concept.conceptRoute]" class="refreshNav">{{concept.name}}</a>-->
+                <a routerLink="concepts/{{concept.conceptRoute}}" class="refreshNav">{{concept.name}}</a>
               </li>
-              
-            </ul>
-          </li>
 
-          <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Examples<span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li><a href="#" class="refreshNav">Demo 1</a></li>
-              <li><a href="#" class="refreshNav">Demo 2</a></li>
-              <li><a href="#" class="refreshNav">Demo 3</a></li>
             </ul>
           </li>
 
