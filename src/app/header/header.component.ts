@@ -64,7 +64,6 @@ export class HeaderComponent implements OnInit {
     $("a.refreshNav").on("click", function () { // refreshNav is css class put on <a> elements in nav
       // on Click of any of the nav bar menu item, route to the respective page and hide the navbar
       // On Desktops this toggle icon is not visible, on mobiles it will be visible
-      alert('User clicked on link');
       if ($("button.navbar-toggle").is(":visible")) {
         $("button.navbar-toggle").trigger("click");
 
