@@ -8,7 +8,7 @@ import { PageNotFoundComponent } from './page-not-found.component';
 
 const appRoutes: Routes = [
     /* Note that the sequence of routing is important*/
-    { path: '', redirectTo: '/home', pathMatch: 'full' },
+    { path: '', redirectTo: 'home', pathMatch: 'full' },
     { path: 'home', component: HomeComponent },
     { path: 'concepts', loadChildren: './concepts/concepts.module#ConceptsModule' }, // I prefer this way of loading module
     // { path: 'home', loadChildren: () => HomeModule }, // This is other way of loading module rquires import at top of this file
