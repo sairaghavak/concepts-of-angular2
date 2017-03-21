@@ -1,6 +1,6 @@
 import { Component, OnInit, ElementRef } from '@angular/core';
 
-import * as $ from 'jquery';// Import jQuery
+import * as $ from 'jquery'; // Import jQuery
 
 @Component({
   selector: 'app-header',
@@ -10,45 +10,45 @@ import * as $ from 'jquery';// Import jQuery
 
 export class HeaderComponent implements OnInit {
 
-  topics: Topic[];
+  concepts: Concept[];
 
   constructor(private _elementRef: ElementRef) {
-    this.topics = [
+    this.concepts = [
       {
         name: 'Modules',
-        topicRoute: 'modules'
+        conceptRoute: 'modules'
       },
       {
         name: 'Components',
-        topicRoute: 'components'
+        conceptRoute: 'components'
       },
       {
         name: 'Templates',
-        topicRoute: 'templates'
+        conceptRoute: 'templates'
       },
       {
         name: 'Directives',
-        topicRoute: 'directives'
+        conceptRoute: 'directives'
       },
       {
         name: 'Data Binding',
-        topicRoute: 'databinding'
+        conceptRoute: 'databinding'
       },
       {
         name: 'Services',
-        topicRoute: 'services'
+        conceptRoute: 'services'
       },
       {
         name: 'Dependency Injection',
-        topicRoute: 'dependencyinjection'
+        conceptRoute: 'dependencyinjection'
       },
       {
         name: 'Routing',
-        topicRoute: 'routing'
+        conceptRoute: 'routing'
       },
       {
         name: 'More coming up..',
-        topicRoute: 'upcoming'
+        conceptRoute: 'upcoming'
       }
 
 
@@ -63,16 +63,16 @@ export class HeaderComponent implements OnInit {
 
     $('a.refreshNav').on('click', function () { // refreshNav is css class put on <a> elements in nav
       // on Click of any of the nav bar menu item, route to the respective page and hide the navbar
-      // On Desktops this toggle icon is not visible, on mobiles it will be visible 
-      if ($("button.navbar-toggle").is(":visible")) {
-        $("button.navbar-toggle").trigger("click");
+      // On Desktops this toggle icon is not visible, on mobiles it will be visible
+      if ($('button.navbar-toggle').is(':visible')) {
+        $('button.navbar-toggle').trigger('click');
 
       }
     });
   }
 }
 
-export interface Topic {
+export interface Concept {
   name: string;
-  topicRoute: string;
+  conceptRoute: string;
 }
