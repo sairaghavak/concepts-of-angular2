@@ -17,19 +17,15 @@
       <div class="collapse navbar-collapse" id="thisNavBar">
         <ul class="nav navbar-nav">
 
-          <li class=""><a href="#" class="refreshNav">Home</a></li>
+          <!-- home is a static route -->
+          <li class=""><a routerLink="home" class="refreshNav">Home</a></li>
           <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Topics<span class="caret"></span></a>
+            <a class="dropdown-toggle" data-toggle="dropdown" >Topics<span class="caret"></span></a>
             <ul class="dropdown-menu">
-              <li><a href="#" class="refreshNav">Modules</a></li>
-              <li><a href="#" class="refreshNav">Components</a></li>
-              <li><a href="#" class="refreshNav">Templates</a></li>
-              <li><a href="#" class="refreshNav">Directives</a></li>
-              <li><a href="#" class="refreshNav">Data Binding</a></li>
-              <li><a href="#" class="refreshNav">Services</a></li>
-              <li><a href="#" class="refreshNav">Dependency Injection</a></li>
-              <li><a href="#" class="refreshNav">Routing</a></li>
-              <li><a href="#" class="refreshNav">More coming up...</a></li>
+              <li *ngFor = "let topic of topics">
+                  <a  routerLink="topics/{{topic.topicRoute}}" class="refreshNav">{{topic.name}}</a>
+              </li>
+              
             </ul>
           </li>
 
