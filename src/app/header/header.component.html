@@ -24,7 +24,7 @@
             <ul class="dropdown-menu">
               <li *ngFor="let concept of concepts">
                 <!--<a [routerLink]="['concepts', concept.conceptRoute]" class="refreshNav">{{concept.name}}</a>-->
-                <a routerLink="concepts/{{concept.conceptRoute}}" (click)="onConceptsClick()">{{concept.name}}</a>
+                <a [routerLink]="['concepts', concept.conceptRoute]" (click)="onConceptsClick()">{{concept.name}}</a>
               </li>
 
             </ul>
