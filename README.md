@@ -11,5 +11,7 @@ This app will demonstrate some of the basic concepts of angular2.
 7. Dependency Injection
 8. Routing
 
-This app is available here: [https://sairaghavak.github.io/concepts-of-angular2](https://sairaghavak.github.io/concepts-of-angular2/)
+This app is available here: [https://sairaghavak.surge.sh](https://sairaghavak.surge.sh)
+
+
 
