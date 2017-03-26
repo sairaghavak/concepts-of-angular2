@@ -1,0 +1,34 @@
+# Travis build configuration file .travis.yml 
+# Serves like pom.xml for maven and build.xml for apache ant and build.sbt for sbt etc
+
+# The type of programming language you are building the app
+language: node_js
+
+# Specify node.js versions
+node_js:
+    - "7"
+
+    
+# Before running the actual build
+before-script:
+    - npm install
+    - npm install -global surge
+
+    
+# This is the actual build step
+script:
+    - ng build --prod --aot
+
+    
+# Builds triggered from Pull requests will never trigger deploy. By default Travis CI will deploy from master branch.
+deploy:
+  provider: surge
+  skip_cleanup: true
+  project: ./dist/
+
+  
+# notifications: always, never, change(notifies when there is change in build status changes)
+notifications:
+  email:
+    on_success: change # default: change
+    on_failure: change # default: change
