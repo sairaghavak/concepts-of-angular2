@@ -1,3 +1,5 @@
+![Build Status Image from Travis](https://travis-ci.org/sairaghavak/concepts-of-angular2.svg?branch=master)
+
 # ConceptsOfAngular2
 
 This app will demonstrate some of the basic concepts of angular2.
