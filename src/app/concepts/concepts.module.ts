@@ -1,15 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { ConceptsRoutingModule, conceptsRoutingComponents } from './concepts-routing.module';
+import { ConceptsRoutingModule, CONCEPTS_ROUTING_COMPONENTS } from './concepts-routing.module';
 
+import { ng2Gist } from 'ng2-gist';
 
 @NgModule({
   imports: [
     CommonModule,
     ConceptsRoutingModule
   ],
-  declarations: [conceptsRoutingComponents]
+  declarations: [CONCEPTS_ROUTING_COMPONENTS, ng2Gist]
 })
 export class ConceptsModule {
   constructor() {
