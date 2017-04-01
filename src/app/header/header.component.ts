@@ -27,12 +27,16 @@ export class HeaderComponent implements OnInit {
         conceptRoute: 'templates'
       },
       {
-        name: 'Directives',
-        conceptRoute: 'directives'
+        name: 'MetaData',
+        conceptRoute: 'metadata'
       },
       {
         name: 'Data Binding',
-        conceptRoute: 'databinding'
+        conceptRoute: 'data-binding'
+      },
+      {
+        name: 'Directives',
+        conceptRoute: 'directives'
       },
       {
         name: 'Services',
@@ -40,15 +44,7 @@ export class HeaderComponent implements OnInit {
       },
       {
         name: 'Dependency Injection',
-        conceptRoute: 'dependencyinjection'
-      },
-      {
-        name: 'Routing',
-        conceptRoute: 'routing'
-      },
-      {
-        name: 'More coming up..',
-        conceptRoute: 'upcoming'
+        conceptRoute: 'dependency-injection'
       }
 
 
