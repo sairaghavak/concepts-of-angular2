@@ -2,18 +2,17 @@
 
 # ConceptsOfAngular2
 
-This app will demonstrate some of the basic concepts of angular2.
+This app will demonstrate the basic building blocks of angular2.
 
-1. Install bootstrap
-2. Set the page layout with header, footer, and content area.
-3. Modules, Components, and Templates.
-4. Data Binding
-5. Directives
-6. Services
-7. Dependency Injection
-8. Routing
+1. Modules
+2. Components
+3. Templates
+4. MetaData
+5. Data Binding
+6. Directives
+7. Services
+8. Dependency Injection
 
-This app is available here: [https://sairaghavak.surge.sh](https://sairaghavak.surge.sh)
 
 
 
