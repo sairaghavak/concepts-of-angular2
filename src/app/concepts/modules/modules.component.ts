@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
+import { Constants } from '../constants';
 
 @Component({
   selector: 'app-modules',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ModulesComponent implements OnInit {
 
-  constructor() { }
+  readonly gistModuleId: string;
 
-  ngOnInit() {
+  constructor(private _parentRouter: Router, private _activateRoute: ActivatedRoute) {
+    this.gistModuleId = Constants.getModuleGistId();
+  }
+
+  ngOnInit() { }
+
+  goToMetaData() {
+    this._parentRouter.navigate(['../metadata'], { relativeTo: this._activateRoute });
   }
 
 }

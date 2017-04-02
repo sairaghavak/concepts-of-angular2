@@ -1,3 +1,14 @@
-<p>
-  modules works!
+<h4>Modules</h4>
+<ul>
+  <li>A module in Angular is just another Typescript class.</li>
+  <li>Angular recognizes the class as angular mdodule when it is decorated with a decorator called <code>@NgModule</code>. These
+    decorators are similar to annotations in Java. Example: <code>@Override</code>.</li>
+  <li>Every angular application will have at least one angular module. The default angular module is a root angular module and
+    is conventionally named as <code>AppModule</code> in Angular applications.</li>
+  <li>Decorators help Angualar understand what those classes are and how they should work. I will put my thoughts on decorator
+    in <a (click)="goToMetaData()">metadata</a> section.</li>
+</ul>
+<p>Below is an example of an Angular2 module. To make it easy to understand I have made the below code a bit verbose by adding
+  comments.
+  <ng2-gist [gistId]="gistModuleId"></ng2-gist>
 </p>
