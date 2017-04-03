@@ -11,9 +11,9 @@ This app will demonstrate the basic building blocks of angular2.
 7. Services
 8. Dependency Injection
 
-### License
+## License
 
-The repository is under [MIT license](./LICENSE).
+This repository is under the [MIT license](./LICENSE).
 
 
 
