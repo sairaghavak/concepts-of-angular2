@@ -10,6 +10,7 @@ import { ISubscription } from 'rxjs/Subscription';
   styleUrls: ['./modules.component.css']
 })
 export class ModulesComponent implements OnInit, OnDestroy {
+  isLoading:boolean;
   private subscriber: ISubscription;
   codeSnippet: string;
   private moduleErrorMessage: string;
@@ -25,6 +26,7 @@ export class ModulesComponent implements OnInit, OnDestroy {
         this.moduleErrorMessage = error;
       },
       () => {
+        this.isLoading = true;
         console.log("Successfully loaded file.");
       }
 

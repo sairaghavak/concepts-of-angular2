@@ -13,4 +13,8 @@
         </li>
     </ul>
 </div>
-<img src="assets/images/sunset_time.png" />
+<div *ngIf="!isImageLoaded" class="text-center">
+    <img src="assets/radar.gif" />
+    <!--Free Gif icon downloaded from https://preloaders.net/en/free -->
+</div>
+<img src="assets/images/sunset_time.png" (load)="onLoadAction()" />
