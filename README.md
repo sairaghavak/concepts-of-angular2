@@ -1,4 +1,4 @@
-# Concepts of Angular2  ![Build Status Image from Travis](https://travis-ci.org/sairaghavak/concepts-of-angular2.svg?branch=master)
+# Concepts of Angular2 ![Build Status Image from Travis](https://travis-ci.org/sairaghavak/concepts-of-angular2.svg?branch=master)
 
 This app will demonstrate the basic building blocks of angular2.
 
@@ -10,6 +10,10 @@ This app will demonstrate the basic building blocks of angular2.
 6. Directives
 7. Services
 8. Dependency Injection
+
+### License
+
+The repository is under [MIT license](./LICENSE).
 
 
 
