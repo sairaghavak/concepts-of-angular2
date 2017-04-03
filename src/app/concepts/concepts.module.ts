@@ -3,14 +3,17 @@ import { CommonModule } from '@angular/common';
 
 import { ConceptsRoutingModule, CONCEPTS_ROUTING_COMPONENTS } from './concepts-routing.module';
 
-import { ng2Gist } from 'ng2-gist';
+import { FileService } from '../shared-services/FileService';
+import { Constants } from '../shared-services/constants';
+
 
 @NgModule({
   imports: [
     CommonModule,
     ConceptsRoutingModule
   ],
-  declarations: [CONCEPTS_ROUTING_COMPONENTS, ng2Gist]
+  declarations: [CONCEPTS_ROUTING_COMPONENTS],
+  providers: [Constants, FileService]
 })
 export class ConceptsModule {
   constructor() {
