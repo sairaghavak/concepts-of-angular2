@@ -11,7 +11,7 @@ import { ISubscription } from 'rxjs/Subscription';
 })
 export class ModulesComponent implements OnInit, OnDestroy {
   private subscriber: ISubscription;
-  private codeSnippet: string;
+  codeSnippet: string;
   private moduleErrorMessage: string;
   private readonly modules_snippet_file: string = Constants.MODULE_FILE_PATH;
   constructor(private _parentRouter: Router, private _activateRoute: ActivatedRoute, private _fileService: FileService) { }
