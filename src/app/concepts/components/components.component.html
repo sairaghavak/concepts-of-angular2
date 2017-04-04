@@ -5,22 +5,22 @@
   <li>
     <p>A html page with header, footer and container can be designed as a parent component(example: <code>&lt;app-root&gt;</code>)
       having 3 child components as shown below.</p>
-    <div *ngIf="!isLoading[0]" class="text-center">
+    <div *ngIf="!codeSnippetModels[0].isLoading" class="text-center">
       <img src="assets/radar.gif" />
       <!--Free Gif icon downloaded from https://preloaders.net/en/free -->
     </div>
-    <p [innerHtml]="codeSnippets[0] | trustedHtml"></p>
+    <p [innerHtml]="codeSnippetModels[0].codeSnippet | trustedHtml"></p>
     <!-- without this pipe, we will face this "WARNING: sanitizing HTML stripped some content" in console log-->
   </li>
   <li>
     <p>Here is an example of an Angular2 component. To make it easy to understand I have made the below code a bit verbose by
       adding comments.
     </p>
-    <div *ngIf="!isLoading[1]" class="text-center">
+    <div *ngIf="!codeSnippetModels[1].isLoading" class="text-center">
       <img src="assets/radar.gif" />
       <!--Free Gif icon downloaded from https://preloaders.net/en/free -->
     </div>
-    <p [innerHtml]="codeSnippets[1]"></p>
+    <p [innerHtml]="codeSnippetModels[1].codeSnippet"></p>
   </li>
 
 </ul>
