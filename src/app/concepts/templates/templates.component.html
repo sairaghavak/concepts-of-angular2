@@ -1,3 +1,17 @@
-<p>
-  templates works!
-</p>
+<h4>Templates</h4>
+<ul>
+  <li>A template in angular2 is just another html page.</li>
+  <li>Templates are bind to components. The term binding is commonly used in most of the web development frameworks wherein a
+    html element is bind to a property in the backing bean or a class. In the <a routerLink="../data-binding">Data Binding</a>    section, I will describe more about this concept.</li>
+  <li>Templates can have other templates inside them. This can be done by just adding the <code>selector</code> property value
+    that is defined in a component.</li>
+  <li>As an analogy, we can think of <a href="https://www.playframework.com/documentation/2.5.x/ScalaTemplates">Scala templates</a>    in Play framework and also, <a href="http://docs.oracle.com/javaee/6/tutorial/doc/gjddd.html">Expression Language</a>    in JEE.</li>
+  <li>
+    <p>Below is an example of an Angular2 template.</p>
+    <div *ngIf="!isLoading" class="text-center">
+      <img src="assets/radar.gif" />
+      <!--Free Gif icon downloaded from https://preloaders.net/en/free -->
+    </div>
+    <p [innerHtml]="codeSnippet"></p>
+  </li>
+</ul>
