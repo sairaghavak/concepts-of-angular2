@@ -1,5 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
-import { Router, ActivatedRoute } from '@angular/router';
+import { Component, OnInit} from '@angular/core';
 import { Constants } from '../../shared-services/constants';
 import { FileService } from '../../shared-services/FileService';
 
@@ -15,7 +14,7 @@ export class ModulesComponent implements OnInit {
   private moduleErrorMessage: string;
   private readonly modules_snippet_file: string = Constants.MODULE_FILE_PATH;
 
-  constructor(private _parentRouter: Router, private _activateRoute: ActivatedRoute, private _fileService: FileService) { }
+  constructor(private _fileService: FileService) { }
 
   ngOnInit() {
     this._fileService.getFile(this.modules_snippet_file).subscribe(
@@ -27,7 +26,6 @@ export class ModulesComponent implements OnInit {
       },
       () => {
         this.isLoading = true;
-        console.log("Successfully loaded file.");
       }
     );
   }
