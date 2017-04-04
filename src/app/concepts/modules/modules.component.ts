@@ -31,9 +31,4 @@ export class ModulesComponent implements OnInit {
       }
     );
   }
-
-  goToMetaData() {
-    this._parentRouter.navigate(['../metadata'], { relativeTo: this._activateRoute });
-  }
-
 }
