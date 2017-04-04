@@ -1,5 +1,7 @@
 <pre>
 /*
+ * A simple default Angular module.
+ * 
  * @Author: Sai Raghava Katepally 
  * @Date: 2017-04-02 08:11:13 
  * @Last Modified by: Sai Raghava Katepally 
