@@ -7,12 +7,14 @@
     is conventionally named as <code>AppModule</code> in Angular applications.</li>
   <li>Decorators help Angualar understand what those classes are and how they should work. I will put my thoughts on decorator
     in <a (click)="goToMetaData()">metadata</a> section.</li>
+  <li>
+    <p>Below is an example of an Angular2 module. To make it easy to understand I have made the below code a bit verbose by
+      adding comments.
+    </p>
+    <div *ngIf="!isLoading" class="text-center">
+      <img src="assets/radar.gif" />
+      <!--Free Gif icon downloaded from https://preloaders.net/en/free -->
+    </div>
+    <p [innerHtml]="codeSnippet"></p>
+  </li>
 </ul>
-<p>Below is an example of an Angular2 module. To make it easy to understand I have made the below code a bit verbose by adding
-  comments.
-</p>
-<div *ngIf="!isLoading" class="text-center">
-  <img src="assets/radar.gif" />
-  <!--Free Gif icon downloaded from https://preloaders.net/en/free -->
-</div>
-<p [innerHtml]="codeSnippet"></p>
