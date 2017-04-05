@@ -10,7 +10,7 @@ export class Constants {
     public static readonly TEMPLATES_FILE_PATH: string = Constants.CODE_SNIPPETS_ROOT_DIR + "templates.md";
     public static readonly TEMPLATES_HTML_FILE_PATH: string = Constants.CODE_SNIPPETS_ROOT_DIR + "templates.html";
 
-    public static readonly METADATA_FILE_PATH: string = Constants.CODE_SNIPPETS_ROOT_DIR + "metadata.md";
+    public static readonly METADATA_FILE_PATH: string = Constants.COMPONENTS_FILE_PATH;
 
     public static readonly DATA_BINDING_FILE_PATH: string = Constants.CODE_SNIPPETS_ROOT_DIR + "data-binding.md";
 

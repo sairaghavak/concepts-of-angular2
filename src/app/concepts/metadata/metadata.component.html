@@ -1,3 +1,32 @@
-<p>
-  metadata works!
-</p>
+<h4>MetaData</h4>
+<ul>
+  <li>Needless to say that MetaData is all about data about data.</li>
+  <li>In the current programming world, metadata is widely used, following the convention over configuration thereby reducing
+    the verbosity of xml and other external configuration files. </li>
+  <li>In any given angular project, we mostly see files with a <code>.ts</code> extension i.e., a typescript file. </li>
+  <li>We refer to some of the typescript file as modules, components, services and pipes etc. It is because of the metadata that
+    helps angular to recognize these typsecript files as modules, components etc.</li>
+  <li>We encapsulate the metadata using a decorator. As said in the <a routerLink="../modules">Modules</a> section, I repeat
+    that these decorators are similar to annotations in java. Example: <code>@Override</code>.</li>
+  <li>
+    There are many decorators defined in Angular2. Here are some of the commonly used decorators i.e.,
+    <ul *ngFor="let thisSnippet of inlineCodeSnippets">
+      <li>
+        <code [innerHtml]="thisSnippet.inlineCode"></code>
+        <span>-</span>
+        <span>{{thisSnippet.codeDescription}}</span>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>
+      Code snippet from <a routerLink="../components">Component</a> section is once again shown here for the relevance of
+      the matter.
+    </p>
+    <div *ngIf="!isLoading" class="text-center">
+      <img src="assets/radar.gif" />
+      <!--Free Gif icon downloaded from https://preloaders.net/en/free -->
+    </div>
+    <p [innerHtml]="codeSnippet"></p>
+  </li>
+</ul>
