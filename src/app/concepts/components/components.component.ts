@@ -33,7 +33,6 @@ export class ComponentsComponent implements OnInit, AfterViewChecked {
   }
 
   ngAfterViewChecked() {
-    console.log('ngAfterViewChecked')
     PR.prettyPrint();
   }
 
