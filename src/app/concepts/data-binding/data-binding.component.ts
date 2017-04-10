@@ -54,8 +54,8 @@ export class DataBindingComponent implements OnInit {
     this.welcomeMessage = 'Welcome to Concepts of Angular2!';
     this.interpolationSnippet2 = `{{' Hi '+ welcomeMessage + ' ' + booleanValue + ' ' + 25*25 + ' ' + sayBye() }}`;
     this.interpolationSnippet2Output = 'Hi' + ' ' + this.welcomeMessage + ' ' + this.booleanValue + ' ' + 25 * 25 + ' ' + this.sayBye();
-    this.interpolationSnippet3 = `System.out.println("Hi, " + welcomeMessage + " " + "This app is responsive isn't it? " + isResponsive + "." + sayBye());`;
-    this.interpolationSnippet3Output = 'Hi ' + this.welcomeMessage + "  This app is responsive isn't it? " + this.isResponsive + '.' + this.sayBye();
+    this.interpolationSnippet3 = `System.out.println("Hi, " + welcomeMessage + " " + "This app is responsive isn't it? " + isResponsive + ". " + sayBye());`;
+    this.interpolationSnippet3Output = 'Hi ' + this.welcomeMessage + "  This app is responsive isn't it? " + this.isResponsive + '. ' + this.sayBye();
 
     this.pbSnippet1 = '<input type="text" [value]="2 + 2" [readonly]="booleanProperty" />';
     this.booleanProperty = true;
