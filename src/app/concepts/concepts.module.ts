@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 import { ConceptsRoutingModule, CONCEPTS_ROUTING_COMPONENTS } from './concepts-routing.module';
 
@@ -11,6 +12,7 @@ import { TrustedHtmlPipe } from './pipes/trusted-html.pipe';
 @NgModule({
   imports: [
     CommonModule,
+    FormsModule,
     ConceptsRoutingModule
   ],
   declarations: [CONCEPTS_ROUTING_COMPONENTS, TrustedHtmlPipe],
