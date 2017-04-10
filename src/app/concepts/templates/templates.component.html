@@ -12,6 +12,6 @@
       <img src="assets/radar.gif" />
       <!--Free Gif icon downloaded from https://preloaders.net/en/free -->
     </div>
-    <p [innerHtml]="codeSnippet"></p>
+    <p [innerHtml]="codeSnippet | trustedHtml"></p>
   </li>
 </ul>
