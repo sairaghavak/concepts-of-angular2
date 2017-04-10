@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewChecked } from '@angular/core';
 import { Constants } from '../../shared-services/constants';
 import { FileService } from '../../shared-services/FileService';
 import { SmallCodeSnippet } from './SmallCodeSnippet'
@@ -8,7 +8,7 @@ import { SmallCodeSnippet } from './SmallCodeSnippet'
   templateUrl: './metadata.component.html',
   styleUrls: ['./metadata.component.css']
 })
-export class MetadataComponent implements OnInit {
+export class MetadataComponent implements OnInit, AfterViewChecked {
 
   isLoading: boolean;
   codeSnippet: string;
@@ -49,5 +49,9 @@ export class MetadataComponent implements OnInit {
         this.isLoading = true;
       }
     );
+  }
+
+  ngAfterViewChecked() {
+    PR.prettyPrint();
   }
 }

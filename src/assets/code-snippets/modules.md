@@ -1,4 +1,4 @@
-<pre>
+<pre class="prettyprint">
 /*
  * A simple default Angular module.
  * 

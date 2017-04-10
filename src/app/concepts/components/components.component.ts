@@ -1,20 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewChecked } from '@angular/core';
 import { Constants } from '../../shared-services/constants';
 import { FileService } from '../../shared-services/FileService';
-import { CodeSnippetModel } from './CodeSnippetModel'
+import { CodeSnippetModel } from './CodeSnippetModel';
 
 @Component({
   selector: 'app-components',
   templateUrl: './components.component.html',
   styleUrls: ['./components.component.css']
 })
-export class ComponentsComponent implements OnInit {
+export class ComponentsComponent implements OnInit, AfterViewChecked {
 
   private htmlCodeSnippet: CodeSnippetModel;
   private componentClassCodeSnippet: CodeSnippetModel;
   codeSnippetModels: CodeSnippetModel[] = [];
 
   private componentErrorMessage: string;
+
   constructor(private _fileService: FileService) {
     this.htmlCodeSnippet = new CodeSnippetModel();
     this.htmlCodeSnippet.codeSnippetFilePath = Constants.COMPONENTS_HTML_FILE_PATH;
@@ -26,12 +27,15 @@ export class ComponentsComponent implements OnInit {
   }
 
   ngOnInit() {
-
     for (let thisCodeSnippetModel of this.codeSnippetModels) {
       this.subscribeAndGetFile(thisCodeSnippetModel);
     }
   }
 
+  ngAfterViewChecked() {
+    console.log('ngAfterViewChecked')
+    PR.prettyPrint();
+  }
 
   subscribeAndGetFile(model: CodeSnippetModel) {
     this._fileService.getFile(model.codeSnippetFilePath).subscribe(

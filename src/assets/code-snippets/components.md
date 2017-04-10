@@ -1,4 +1,4 @@
-<pre>
+<pre class="prettyprint">
 /*
  * Basic example of Angular Component.
  * 

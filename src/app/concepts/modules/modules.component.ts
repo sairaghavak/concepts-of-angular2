@@ -1,4 +1,4 @@
-import { Component, OnInit} from '@angular/core';
+import { Component, OnInit, AfterViewChecked} from '@angular/core';
 import { Constants } from '../../shared-services/constants';
 import { FileService } from '../../shared-services/FileService';
 
@@ -7,7 +7,7 @@ import { FileService } from '../../shared-services/FileService';
   templateUrl: './modules.component.html',
   styleUrls: ['./modules.component.css']
 })
-export class ModulesComponent implements OnInit {
+export class ModulesComponent implements OnInit, AfterViewChecked {
   isLoading: boolean;
   codeSnippet: string;
 
@@ -28,5 +28,9 @@ export class ModulesComponent implements OnInit {
         this.isLoading = true;
       }
     );
+  }
+
+  ngAfterViewChecked() {
+    PR.prettyPrint();
   }
 }
