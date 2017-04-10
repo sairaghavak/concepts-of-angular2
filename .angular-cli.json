@@ -21,14 +21,14 @@
       "prefix": "app",
       "styles": [
         "../node_modules/bootstrap/dist/css/bootstrap.min.css",
-        "../node_modules/code-prettify/distrib/prettify-small/google-code-prettify/prettify.css",
+        "assets/prettify-small/google-code-prettify/prettify.css",
         "styles.css"
         
       ],
       "scripts": [
         "../node_modules/jquery/dist/jquery.min.js",
         "../node_modules/bootstrap/dist/js/bootstrap.min.js",
-        "../node_modules/code-prettify/distrib/prettify-small/google-code-prettify/prettify.js"
+        "assets/prettify-small/google-code-prettify/prettify.js"
       ],
       "environmentSource": "environments/environment.ts",
       "environments": {
