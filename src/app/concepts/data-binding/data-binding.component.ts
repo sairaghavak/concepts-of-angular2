@@ -27,6 +27,7 @@ export class DataBindingComponent implements OnInit {
   // css style bindings
   pbcssCodeNote: string;
   pbcssSnippet1: string;
+  displayStyle: string;
   pbcssSnippet1Output: string;
   pbcssSnippet2: string;
   pbcssSnippet2Output: string;
@@ -35,6 +36,7 @@ export class DataBindingComponent implements OnInit {
   pbhtmlAttSnippet1: string;
   pbhtmlAttSnippet1Output: string;
   pbhtmlAttSnippet2: string;
+  text: string;
   pbhtmlAttSnippet2Output: string;
 
   // template to component binding
