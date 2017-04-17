@@ -8,6 +8,8 @@ import { FileService } from '../shared-services/FileService';
 
 
 import { TrustedHtmlPipe } from './pipes/trusted-html.pipe';
+import { MyNameDirective } from './directives/my-name.directive';
+
 
 @NgModule({
   imports: [
@@ -15,7 +17,7 @@ import { TrustedHtmlPipe } from './pipes/trusted-html.pipe';
     FormsModule,
     ConceptsRoutingModule
   ],
-  declarations: [CONCEPTS_ROUTING_COMPONENTS, TrustedHtmlPipe],
+  declarations: [CONCEPTS_ROUTING_COMPONENTS, TrustedHtmlPipe, MyNameDirective],
   providers: [FileService]
 })
 export class ConceptsModule { }
