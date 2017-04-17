@@ -14,7 +14,7 @@ export class Constants {
 
     public static readonly DATA_BINDING_FILE_PATH: string = Constants.CODE_SNIPPETS_ROOT_DIR + "data-binding.md";
 
-    public static readonly DIRECTIVES_FILE_PATH: string = Constants.CODE_SNIPPETS_ROOT_DIR + "directives.md";
+    public static readonly DIRECTIVES_FILE_PATH: string = Constants.CODE_SNIPPETS_ROOT_DIR + "custom_directives.md";
 
     public static readonly SERVICES_FILE_PATH: string = Constants.CODE_SNIPPETS_ROOT_DIR + "services.md";
 

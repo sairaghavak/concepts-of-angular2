@@ -1,4 +1,6 @@
 import { Component, OnInit, AfterViewChecked } from '@angular/core';
+import { Constants } from '../../shared-services/constants';
+import { FileService } from '../../shared-services/FileService';
 
 @Component({
   selector: 'app-directives',
@@ -6,6 +8,11 @@ import { Component, OnInit, AfterViewChecked } from '@angular/core';
   styleUrls: ['./directives.component.css']
 })
 export class DirectivesComponent implements OnInit, AfterViewChecked {
+  isLoading: boolean;
+  codeSnippet: string;
+
+  private moduleErrorMessage: string;
+  private readonly directives_snippet_file: string = Constants.DIRECTIVES_FILE_PATH;
 
   addCssClasses: string;
   addCssStyles: {};
@@ -35,7 +42,10 @@ export class DirectivesComponent implements OnInit, AfterViewChecked {
   // ngSwitch snippets
   ngSwitchTemplateSnippet: string;
 
-  constructor() { }
+  // custom directive snippets
+  ngCustomDirectiveSnippet: string;
+
+  constructor(private _fileService: FileService) { }
 
   ngOnInit() {
     this.addCssClasses = "decorate display color";
@@ -101,6 +111,17 @@ export class DirectivesComponent implements OnInit, AfterViewChecked {
 </div>
 </xmp>
 </pre>`;
+    this._fileService.getFile(this.directives_snippet_file).subscribe(
+      response => {
+        this.codeSnippet = response;
+      },
+      error => {
+        this.moduleErrorMessage = error;
+      },
+      () => {
+        this.isLoading = true;
+      }
+    );
   }
 
 
