@@ -44,13 +44,13 @@
                     <br>
                     <strong>Output:</strong>
                     <br>
-                    <input type="text" [value]="2 + 2" [readonly]="booleanProperty" />
+                    <input class="form-control" type="text" [value]="2 + 2" [readonly]="booleanProperty" />
                   </li>
                   <li><code>{{ pbSnippet2 }}</code>
                     <br>
                     <strong>Output:</strong>
                     <br>
-                    <input type="text" [value]="defaultTextMessage" [readonly]="true" />
+                    <input class="form-control" type="text" [value]="defaultTextMessage" [readonly]="true" />
                   </li>
                 </ul>
                 <br>
@@ -82,7 +82,7 @@
                     <br>
                     <strong>Output:</strong>
                     <br>
-                    <input [attr.type]="text" />
+                    <input class="form-control" [attr.type]="text" size="10"/>
                   </li>
                 </ul>
               </li>
@@ -137,7 +137,7 @@
                 <br>
                 <strong>Output:</strong>
                 <br>
-                <input type="text" [(ngModel)]="defaultTextMessage" size="50" />
+                <input class="form-control" type="text" [(ngModel)]="defaultTextMessage" size="50" />
                 <br>
                 <span> {{ defaultTextMessage }}</span>
               </li>
