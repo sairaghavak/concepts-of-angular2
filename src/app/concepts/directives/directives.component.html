@@ -1,3 +1,150 @@
-<p>
-  directives works!
-</p>
+<h4>Built-in directives</h4>
+<ol>
+  <li>
+    <p><strong>Attribute directives:</strong> Used as attributes of elements (Alters appearance or behavior of the existing
+      elements in DOM).</p>
+    <ul>
+      <li><code>ngClass</code>
+        <ul>
+          <li>
+            <p>Example:</p>
+
+            <span>CSS classes</span>
+            <p [innerHtml]="ngClassCssSnippet"></p>
+
+            <span>Component snippet</span>
+            <p [innerHtml]="ngClassComponentSnippet"></p>
+
+            <span>Template snippet</span>
+            <p [innerHtml]="ngClassTemplateSnippet | trustedHtml"></p>
+          </li>
+          <li>
+            <p>Output:</p>
+            <span [ngClass]="addCssClasses">Directives concept is interesting.</span>
+          </li>
+        </ul>
+      </li>
+
+      <br>
+
+      <li><code>ngStyle</code>
+        <ul>
+          <li>
+            <p>Example:</p>
+
+            <span>Component snippet</span>
+            <p [innerHtml]="ngStyleComponentSnippet"></p>
+
+            <span>Template snippet</span>
+            <p [innerHtml]="ngStyleTemplateSnippet | trustedHtml"></p>
+
+          </li>
+          <li>
+            <p>Output:</p>
+            <span [ngStyle]="addCssStyles">Directives concept is interesting.</span>
+          </li>
+        </ul>
+      </li>
+
+      <br>
+
+      <li><code>ngModel</code>
+        <ul>
+          <li>
+            <p>Example:</p>
+
+            <span>Component snippet</span>
+            <p [innerHtml]="ngModelComponentSnippet"></p>
+
+            <span>Template snippet</span>
+            <p [innerHtml]="ngModelTemplateSnippet"></p>
+
+          </li>
+          <li>
+            <p>Output:</p>
+            <input class="form-control"  type="text" [(ngModel)]="defaultTextMessage" size="50" /><br> {{defaultTextMessage}}
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+
+  <br>
+
+  <li>
+    <p><strong>Structural directives:</strong> They change the structure of the view. (Add or remove or replace elements in
+      DOM)
+    </p>
+    <ul>
+      <li><code>ngIf</code>
+        <ul>
+          <li>
+            <p>Example:</p>
+
+            <span>Template snippet</span>
+            <p [innerHtml]="ngIfTemplateSnippet"></p>
+          </li>
+          <li>
+            <p>Output:</p>
+            <div *ngIf="!aBooleanValue">
+              <span>An <code>ngIf</code> demo.</span>
+            </div>
+          </li>
+        </ul>
+      </li>
+
+      <br>
+
+      <li><code>ngFor</code>
+        <ul>
+          <li>
+            <p>Example:</p>
+
+            <span>Template snippet</span>
+            <p [innerHtml]="ngForTemplateSnippet"></p>
+          </li>
+          <li>
+            <p>Output:</p>
+            <div *ngFor="let thisItem of structuralDirectives">
+              <ul>
+                <li>
+                  <code>{{ thisItem }}</code>
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </li>
+
+      <br>
+
+      <li><code>ngSwitch</code>
+        <ul>
+          <li>
+            <p>Example:</p>
+
+            <span>Template snippet</span>
+            <p [innerHtml]="ngSwitchTemplateSnippet"></p>
+          </li>
+          <li>
+            <p>Output:</p>
+            <div [ngSwitch]="2*3">
+              <div *ngSwitchCase="6">
+                <span>An 
+      <code>ngSwitch</code> demo.
+    </span>
+              </div>
+              <div *ngSwitchDefault>
+                <span>This is the default case of 
+      <code>ngSwitch</code>
+    </span>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ol>
+<hr>
+<h4>Custom directives</h4>
