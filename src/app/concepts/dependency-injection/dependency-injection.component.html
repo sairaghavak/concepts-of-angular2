@@ -1,3 +1,45 @@
-<p>
-  dependency-injection works!
-</p>
+<h4>Dependency Injection</h4>
+<ul>
+  <li>Angular has inbuilt Dependency Injection framework and it injects all the services that are required for us upon registering
+    them.
+  </li>
+  <li>
+    Services can be registered in 2 ways.
+    <ol>
+      <li>In <code>@NgModule</code> decorator's providers array. Here a single instance of the service is created at application
+        start-up time and can be used across the module.</li>
+      <li>In <code>@Component</code> decorator's providers array. Here the service instance is created every time component is
+        constructed, and its usage is restricted to the correspondingcomponent.</li>
+    </ol>
+  </li>
+  <li>
+    <p>Here is the code snippet that will demonstrate the usage of <a href="https://en.wikipedia.org/wiki/Dependency_injection">Dependency Injection</a>      with Angular2.</p>
+    <div *ngIf="!codeSnippetModels[0].isLoading" class="text-center">
+      <img src="assets/radar.gif" />
+      <!--Free Gif icon downloaded from https://preloaders.net/en/free -->
+    </div>
+    <p [innerHtml]="codeSnippetModels[0].codeSnippet"></p>
+
+    <br>
+
+    <div *ngIf="!codeSnippetModels[1].isLoading" class="text-center">
+      <img src="assets/radar.gif" />
+      <!--Free Gif icon downloaded from https://preloaders.net/en/free -->
+    </div>
+    <p [innerHtml]="codeSnippetModels[1].codeSnippet"></p>
+
+    <br>
+
+    <div *ngIf="!codeSnippetModels[2].isLoading" class="text-center">
+      <img src="assets/radar.gif" />
+      <!--Free Gif icon downloaded from https://preloaders.net/en/free -->
+    </div>
+    <p [innerHtml]="codeSnippetModels[2].codeSnippet"></p>
+  </li>
+  <li>
+    <p><strong>Note:</strong> Add the services in <code>@NgModule</code> or <code>@Component</code> providers array as shown
+      below.<br>
+      <code>providers: [AboutService, AddressService]</code>
+    </p>
+  </li>
+</ul>
