@@ -1,3 +1,28 @@
-<p>
-  services works!
-</p>
+<h4>Services</h4>
+<ul>
+  <li>It is just another plain typescript class.</li>
+  <li>Generally when following an MVC design pattern, we separate out our core bussiness logic from a controller and put it in
+    the service class. Similarly, in angular2 we just do the same, by separating out the bussiness logic from Component class
+    and place them in a service class.</li>
+  <li>
+    <p>Here is the code snippet of the sample AddressService that displays the users address.</p>
+    <div *ngIf="!codeSnippetModels[0].isLoading" class="text-center">
+      <img src="assets/radar.gif" />
+      <!--Free Gif icon downloaded from https://preloaders.net/en/free -->
+    </div>
+    <p [innerHtml]="codeSnippetModels[0].codeSnippet | trustedHtml"></p>
+  </li>
+  <li>
+    <p>Here the sample component that uses the AddressService.</p>
+    <div *ngIf="!codeSnippetModels[1].isLoading" class="text-center">
+      <img src="assets/radar.gif" />
+      <!--Free Gif icon downloaded from https://preloaders.net/en/free -->
+    </div>
+    <p [innerHtml]="codeSnippetModels[1].codeSnippet"></p>
+  </li>
+  <li>Note that the above code snippet doesn't using dependency injection. It is definitely not a well coded class becuse it
+    is tighty coupled with <code>AddressService</code> class. If we modify the <code>AddressService</code> constructor to
+    take arguments, then <code>AppComponent</code> requires touch-up.</li>
+  <li> Angular2 provides the dependency injection, so that it creates the <code>AddressService</code> object for us and we just
+    have to use it in classes wherever its required. This is discussed in detail in the <a routerLink="../dependency-injection">Dependency Injection</a>    section.</li>
+</ul>
