@@ -1,6 +1,4 @@
-import { Component, OnInit, ElementRef } from '@angular/core';
-
-import * as $ from 'jquery'; // Import jQuery
+import { Component, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -8,11 +6,12 @@ import * as $ from 'jquery'; // Import jQuery
   styleUrls: ['./header.component.css']
 })
 
-export class HeaderComponent implements OnInit {
+export class HeaderComponent {
 
+  @ViewChild("hamburgericon") hamburger_element: ElementRef;
   concepts: Concept[];
 
-  constructor(private _elementRef: ElementRef) {
+  constructor() {
     this.concepts = [
       {
         name: 'Modules',
@@ -51,26 +50,15 @@ export class HeaderComponent implements OnInit {
     ];
   }
 
-  ngOnInit() {
-    /**
-     * Below code helps to traverse through the DOM tree whose root is initialized in the constructor
-     * $(this._elementRef.nativeElement).find('nav').click();
-     */
-
-    $('a.refreshNav').on('click', function () { // refreshNav is css class put on <a> elements in nav
-      // on Click of any of the nav bar menu item, route to the respective page and hide the navbar
-      // On Desktops this toggle icon is not visible, on mobiles it will be visible
-      if ($('button.navbar-toggle').is(':visible')) {
-        $('button.navbar-toggle').trigger('click');
-
-      }
-    });
+  onHeaderClick() {
+    // refernce link: http://stackoverflow.com/questions/41524057/force-collapse-of-bootstrap-4-navbar-on-angular-2-route-change
+    if (this.navBarTogglerIsVisible()) {
+      this.hamburger_element.nativeElement.click();
+    }
   }
 
-  onConceptsClick() {
-    if ($('button.navbar-toggle').is(':visible')) {
-      $('button.navbar-toggle').trigger('click');
-    }
+  navBarTogglerIsVisible() {
+    return this.hamburger_element.nativeElement.offsetParent !== null; // that means hamburger icon has a parent 
   }
 }
 
