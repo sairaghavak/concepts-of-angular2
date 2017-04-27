@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, Renderer, ViewChild, AfterViewInit } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -8,10 +8,13 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
 
 export class HeaderComponent {
 
+  @ViewChild("header") header_element: ElementRef;
   @ViewChild("hamburgericon") hamburger_element: ElementRef;
+  
+  
   concepts: Concept[];
 
-  constructor() {
+  constructor(private _renderer: Renderer) {
     this.concepts = [
       {
         name: 'Modules',
@@ -59,6 +62,18 @@ export class HeaderComponent {
 
   navBarTogglerIsVisible() {
     return this.hamburger_element.nativeElement.offsetParent !== null; // that means hamburger icon has a parent 
+  }
+
+  getHeaderHeight() {
+    return this.header_element.nativeElement.offsetHeight;
+  }
+
+  ngAfterViewInit() {
+    // if screen size is less than 480 px then it must be a smart phone layout and reduce left and right margin
+    if (window.screen.width <= 480) {
+      console.log('in header component ts screen size is less than 480, so now disabling the left and right margins');
+      this._renderer.setElementStyle(this.header_element.nativeElement, 'margin', '0%');
+    }
   }
 }
 

@@ -1,6 +1,6 @@
-<app-header></app-header>
+<app-header #dynamicNavBar></app-header>
 
-<div class="container-fluid">
+<div (window:resize)="onResize()" #contentAfterNavBar  class="container-fluid">
     <!-- Here the dynamic page content sits in based on the routes -->
     <router-outlet></router-outlet>
 </div>
