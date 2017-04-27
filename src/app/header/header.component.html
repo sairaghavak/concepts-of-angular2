@@ -1,6 +1,7 @@
-<header >
+<header>
 
-  <nav #header class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <nav #header class="navbar navbar-default navbar-fixed-top" role="navigation" style="z-index:1000;">
+    <!-- reference link: http://stackoverflow.com/questions/14244357/twitter-bootstrap-v2-2-1-dropdown-links-not-working-on-mobile -->
 
     <div class="container-fluid">
 
@@ -24,8 +25,10 @@
           <li class=""><a routerLink="home" class="refreshNav" (click)="onHeaderClick()">Home</a></li>
 
           <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown">Concepts<span class="caret"></span></a>
-            <ul class="dropdown-menu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Concepts<span class="caret"></span></a>
+            <!-- add href reference link: http://stackoverflow.com/questions/21245090/bootstrap-3-modal-in-navbar-not-link-not-clickable-in-ios-->
+            <!-- another reference link: http://stackoverflow.com/questions/22383547/bootstrap-dropdown-menu-is-not-working -->
+            <ul class="dropdown-menu" role="menu"><!-- added role="menu" -->
               <li *ngFor="let concept of concepts">
                 <!--<a [routerLink]="['concepts', concept.conceptRoute]" class="refreshNav">{{concept.name}}</a>-->
                 <a [routerLink]="['concepts', concept.conceptRoute]" (click)="onHeaderClick()">{{concept.name}}</a>
