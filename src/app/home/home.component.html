@@ -1,8 +1,26 @@
 <h4>Hello and welcome to the Concepts of Angular2.</h4>
 <p>
     This is a Single Page Application developed using Angular2. As the name suggests, in this app I have tried to demonstrate
-    the basic building blocks of Angular2.
+    the basic building blocks of Angular2 as listed below. 
 </p>
+<ol>
+    <li><a routerLink="../concepts/modules">Modules</a></li>
+    <li><a routerLink="../concepts/components">Components</a></li>
+    <li><a routerLink="../concepts/templates">Templates</a></li>
+    <li><a routerLink="../concepts/metadata">MetaData</a></li>
+    <li><a routerLink="../concepts/data-binding">Data Binding</a></li>
+    <li><a routerLink="../concepts/directives">Directives</a></li>
+    <li><a routerLink="../concepts/services">Services</a></li>
+    <li><a routerLink="../concepts/dependency-injection">Dependency Injection</a></li>
+</ol>
+<p>Here is block diagram of basic building blocks of angular2. </p>
+<div *ngIf="!isImageLoaded" class="text-center">
+    <img src="assets/radar.gif" />
+    <!--Free Gif icon downloaded from https://preloaders.net/en/free -->
+</div>
+<img src="assets/images/my-interpretation-of-building-blocks.PNG" (load)="onLoadAction()" class="img-responsive center-block"
+/>
+
 <div>
     <p>
         <b>References</b>
@@ -13,8 +31,3 @@
         </li>
     </ul>
 </div>
-<div *ngIf="!isImageLoaded" class="text-center">
-    <img src="assets/radar.gif" />
-    <!--Free Gif icon downloaded from https://preloaders.net/en/free -->
-</div>
-<img src="assets/images/sunset_time.png" (load)="onLoadAction()" />
