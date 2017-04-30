@@ -1,8 +1,9 @@
-img {
-    max-width: 100%;
-    max-height: 100%;
+#bb_image{
+    cursor: pointer;
 }
 p, h4 {
     text-align: justify;
     line-height: 25px;
 }
+
+

@@ -1,7 +1,7 @@
 <h4>Hello and welcome to the Concepts of Angular2.</h4>
 <p>
     This is a Single Page Application developed using Angular2. As the name suggests, in this app I have tried to demonstrate
-    the basic building blocks of Angular2 as listed below. 
+    the basic building blocks of Angular2 as listed below.
 </p>
 <ol>
     <li><a routerLink="../concepts/modules">Modules</a></li>
@@ -18,9 +18,24 @@
     <img src="assets/radar.gif" />
     <!--Free Gif icon downloaded from https://preloaders.net/en/free -->
 </div>
-<a href="assets/images/my-interpretation-of-building-blocks.PNG">
-    <img src="assets/images/my-interpretation-of-building-blocks.PNG" (load)="onLoadAction()" class="img-responsive center-block"/>
-</a>    
+<img id="bb_image" data-toggle="modal" data-target="#img_modal" src="assets/images/my-interpretation-of-building-blocks.PNG"
+    (load)="onLoadAction()" class="img-responsive center-block" />
+
+<div class="modal fade" id="img_modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" data-toogle="tooltip" 
+                    data-placement="top" title="Press esc to exit">
+                    <span aria-hidden="true" class="glyphicon glyphicon-remove"></span>
+                </button>
+                <img src="assets/images/my-interpretation-of-building-blocks.PNG" (load)="onLoadAction()" class="img-responsive center-block"
+                />
+            </div>
+        </div>
+    </div>
+</div>
+
 
 <div>
     <p>
