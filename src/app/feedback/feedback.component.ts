@@ -52,21 +52,16 @@ export class FeedbackComponent implements OnInit {
 
   isEmailFieldValid() {
     // Check if email field has no red style and no error message 
-    console.log(this.showEmailErrorMessage); // when there is error message it will display true. For success it should be false.
-    console.log(this.emailField.nativeElement.classList.contains('email_success'));
     return !this.showEmailErrorMessage && this.emailField.nativeElement.classList.contains('email_success');
   }
 
   submitToGoogleForms(formData: JSON) {
-    console.log('Form successfuly submitted to google forms....' + formData);
     this.showGlobalSuccess = true;
-    console.log("form data length... " + formData);
 
     // real submit here 
     let data = new URLSearchParams();
     for (var key in formData) {
       if (formData.hasOwnProperty(key)) {
-        console.log(key + " -> " + formData[key]);
         data.append(key, formData[key]);
       }
     }
@@ -76,7 +71,7 @@ export class FeedbackComponent implements OnInit {
       .subscribe(data => {
         console.log('Congrats your feedback is recorded...');
       }, error => {
-        console.log(error.json());
+        console.log(error.json()); // Need to check this error, No 'Access-Control-Allow-Origin' header is present on the requested resource.
       });
 
     if (this.feedBackForm.submitted) {
