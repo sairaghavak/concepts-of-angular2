@@ -1,0 +1,82 @@
+<div class="container-fluid">
+  <div class="global_error" [hidden]="!showGlobalError">
+    <span class="glyphicon glyphicon-remove"></span> Please fill all the fields marked with * to submit feedback.
+  </div>
+
+  <div class="global_success" [hidden]="!showGlobalSuccess">
+    <span class="glyphicon glyphicon-ok"></span> Thanks for submitting your feedback.
+  </div>
+  <form novalidate="true" #feedBackForm="ngForm" (ngSubmit)="onSubmit(feedBackForm.value)" role="form">
+    <div class="form-group required">
+      <label for="entry_518557825" class="control-label">How do you rate this app in a scale of 1 to 5?</label>
+      <!-- radio buttons -->
+      <div>
+        <label class="radio-inline">
+          <input required type="radio" name="entry.518557825" id="entry_518557825" value="1" ngModel> 1
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="entry.518557825" id="entry_518557825" value="2" ngModel> 2
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="entry.518557825" id="entry_518557825" value="3" ngModel> 3
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="entry.518557825" id="entry_518557825" value="4" ngModel> 4
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="entry.518557825" id="entry_518557825" value="5" ngModel> 5
+        </label>
+      </div>
+    </div>
+
+    <div class="form-group required">
+      <label for="entry_519980222" class="control-label">How was your experience with this app when viewed it from mobile device, rate it in a scale of 1 to 5?</label>
+      <!-- radio buttons -->
+      <div>
+        <label class="radio-inline">
+        <input required type="radio" name="entry.519980222" id="entry_519980222" value="1" ngModel> 1
+      </label>
+        <label class="radio-inline">
+        <input type="radio" name="entry.519980222" id="entry_519980222" value="2" ngModel> 2
+      </label>
+        <label class="radio-inline">
+        <input type="radio" name="entry.519980222" id="entry_519980222" value="3" ngModel> 3
+      </label>
+        <label class="radio-inline">
+        <input type="radio" name="entry.519980222" id="entry_519980222" value="4" ngModel> 4
+      </label>
+        <label class="radio-inline">
+        <input type="radio" name="entry.519980222" id="entry_519980222" value="5" ngModel> 5
+      </label>
+      </div>
+    </div>
+
+    <div class="form-group required">
+      <label for="entry_262837013" class="control-label">Your email?</label>
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          <input required type="email" #email class="form-control" name="entry.262837013" id="entry_262837013" placeholder="Enter your email here"
+            ngModel (keyup)="onKeyUpValidateEmail(email.value)">
+          <div [hidden]="!showEmailErrorMessage" class="alert alert-danger" style="margin-top:1%">
+            Please enter the valid email address
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="entry_1428475507" class="control-label">Any other suggestions or comments?</label>
+      <div class="row">
+        <div class="col-xs-12">
+          <textarea name="entry.1428475507" id="entry_1428475507" class="form-control" style="min-width: 100%" rows="2" placeholder=""
+            maxlength="140" rows="0" ngModel></textarea>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+
+  </form>
+</div>

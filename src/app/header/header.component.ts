@@ -71,7 +71,6 @@ export class HeaderComponent {
   ngAfterViewInit() {
     // if screen size is less than 480 px then it must be a smart phone layout and reduce left and right margin
     if (window.screen.width <= 480) {
-      console.log('in header component ts screen size is less than 480, so now disabling the left and right margins');
       this._renderer.setElementStyle(this.header_element.nativeElement, 'margin', '0%');
     }
   }
